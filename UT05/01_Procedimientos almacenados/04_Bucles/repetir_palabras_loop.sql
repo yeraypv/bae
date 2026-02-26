@@ -8,7 +8,7 @@ BEGIN
     set x = 0;
 
     miloop: LOOP
-        if(x > numpal) THEN
+        if(x >= numpal) THEN
             LEAVE miloop;
         END IF;
         set x = x + 1;

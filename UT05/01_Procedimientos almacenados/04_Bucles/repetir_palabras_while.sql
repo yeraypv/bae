@@ -6,7 +6,7 @@ CREATE PROCEDURE repetir_palabras_while (
 BEGIN
     DECLARE x INT;
     SET x = 0;
-    WHILE x <= numpal DO
+    WHILE x < numpal DO
         SELECT palabra;
         SET x = x + 1;
     END WHILE;
