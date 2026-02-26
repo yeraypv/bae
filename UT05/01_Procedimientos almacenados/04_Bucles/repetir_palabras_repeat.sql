@@ -12,6 +12,6 @@ BEGIN
         SET counter = counter + 1;
     UNTIL counter >= 10
     END REPEAT;
-END$$
+END;$$
 
 DELIMITER ;

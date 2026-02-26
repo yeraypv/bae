@@ -15,5 +15,6 @@ BEGIN
         select palabra;
     END LOOP miloop;
 
-END$$
+END;$$
+
 DELIMITER ;

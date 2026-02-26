@@ -13,6 +13,6 @@ BEGIN
     	SELECT 'b es mayor que a';
     END IF;
 
-END$$
+END;$$
 
 DELIMITER ;

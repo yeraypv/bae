@@ -10,6 +10,6 @@ BEGIN
     SET edad=actual - nacimiento;
         
     SELECT edad;
-END$$
+END;$$
 
 DELIMITER ;

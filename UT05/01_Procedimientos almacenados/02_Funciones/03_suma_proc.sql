@@ -8,6 +8,6 @@ BEGIN
 	DECLARE suma INT;
     SET suma = a + b;
     SELECT suma;
-END$$
+END;$$
 
 DELIMITER ;

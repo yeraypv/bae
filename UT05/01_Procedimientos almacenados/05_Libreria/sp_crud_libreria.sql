@@ -24,6 +24,6 @@ BEGIN
     ELSE
     	SELECT 'Error: Opción no válida' AS Error;
     END CASE;
-END$$
+END;$$
 
 DELIMITER ;

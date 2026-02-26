@@ -5,6 +5,6 @@ BEGIN
 	DECLARE variable INT;
     SET variable = 7;
     SELECT variable;
-END$$
+END;$$
 
 DELIMITER ;

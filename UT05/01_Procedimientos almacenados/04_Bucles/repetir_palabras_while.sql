@@ -10,5 +10,5 @@ BEGIN
         SELECT palabra;
         SET x = x + 1;
     END WHILE;
-END$$
+END;$$
 DELIMITER ;
