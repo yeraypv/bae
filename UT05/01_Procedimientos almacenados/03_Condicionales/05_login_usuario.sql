@@ -11,8 +11,8 @@ CREATE TABLE usuarios (
 DELIMITER $$
 
 CREATE PROCEDURE login_usuario(
-    IN usuario VARCHAR(50),
-    IN clave VARCHAR(100)
+    IN p_usuario VARCHAR(50),
+    IN p_clave VARCHAR(100)
 )
 BEGIN
     DECLARE _clave VARCHAR(100);
@@ -24,17 +24,17 @@ BEGIN
     SELECT clave, intentos_fallidos, bloqueado, activo
     INTO _clave, _intentos, _bloqueado, _activo
     FROM usuarios
-    WHERE usuario = _usuario;
+    WHERE usuario = p_usuario;
 
     -- Verificar que exista y esté activo
     IF _activo = TRUE AND _bloqueado = FALSE THEN
 
         -- Verificar contraseña
-        IF _clave = clave THEN
+        IF _clave = p_clave THEN
             
             UPDATE usuarios
             SET intentos_fallidos = 0
-            WHERE usuario = _usuario;
+            WHERE usuario = p_usuario;
 
             SELECT 'Login correcto' AS mensaje;
 
@@ -42,7 +42,7 @@ BEGIN
             
             UPDATE usuarios
             SET intentos_fallidos = intentos_fallidos + 1
-            WHERE usuario = _usuario;
+            WHERE usuario = p_usuario;
 
             SELECT 'Password incorrecto' AS mensaje;
 
