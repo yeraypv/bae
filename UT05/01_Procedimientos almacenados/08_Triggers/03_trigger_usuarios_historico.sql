@@ -49,7 +49,7 @@ AFTER UPDATE ON usuarios
 FOR EACH ROW
 BEGIN 
    INSERT INTO usuarios_historico(idusuario,accion,registro)
-   VALUES (OLD.id,'Usuario Actualizado',NOW());
+   VALUES (NEW.id,'Usuario Actualizado',NOW());
 
 END; $$
 
